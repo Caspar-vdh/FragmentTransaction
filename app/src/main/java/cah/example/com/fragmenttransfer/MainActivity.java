@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void switchFragment(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
         if (activeFragmentType.equals(Fragment1.class)) {
             activeFragmentType = Fragment2.class;
             fragmentTransaction.show(fragment2);
